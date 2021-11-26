@@ -1,25 +1,198 @@
 # 100 Days of Code
-> 100 Days of Code - The Complete Python Pro Bootcamp for 2021
-
 ###### tags: `Python` 
 
-## Day 1 : Strings
+> 100 Days of Code - The Complete Python Pro Bootcamp for 2021
+
+
+## Day 1 : Variable
 * print( ) function : `print("hello")`
-* Strings concatenation : `print("hello"+"world")`
-* input( ) function -> always get str
-* variable
+* Variable
+    * Creating Variables
+        ```=python
+        x = 5
+        y = "John"
+        ```
+### Variable Names
+   * Rules for Python variables:
+       * Must start with a letter or the underscore character
+       * Cannot start with a number
+       * Can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )
+       * Variable names are case-sensitive (age, Age and AGE are three different variables)
+       
+           ```=python
+           2my-first_name = "John" (x)
+           myfirst_name = "John" (o)
+           ```
+
+* Multi Words Variable Names
+    * Camel Case : Each word, except the first, starts with a capital letter:
+
+        `myVariableName = "John"`
+    * Pascal Case : Each word starts with a capital letter:
+
+        `MyVariableName = "John"`
+    * Snake Case : Each word is separated by an underscore character:
+        `my_variable_name = "John"`
+        
+### Many Values to Multiple Variables
+```=PYTHON
+x, y, z = "Orange", "Banana", "Cherry"
+print(x)
+print(y)
+print(z)
+```
+### Unpack a Collection
+```=PYTHON
+fruits = ["apple", "banana", "cherry"]
+x, y, z = fruits
+print(x)
+print(y)
+print(z)
+```
+
 
 ## Day 2 : Data Type
-* Data type
-    * strings
-        * subscript : `print("hello"[0])` 
-            > computer count from 0 
-    * integer
-        * larger integer : 123456 -> `123_456`
-            > computer will ingnore '_'
-    * float
-    * boolean 
+
+
+* strings
+    * subscript : `print("hello"[0])` 
+        > computer count from 0 
+    * Strings concatenation : `print("hello"+"world")`
+    * input( ) function -> always get str data type
+        ```=python
+            # string
+            x = "Hello World"
+            x = "123456"
+        ```
+    * Strings are Arrays : strings in Python are arrays of bytes representing unicode characters.
+    
+    * Python String Methods
+
+        | Method | Description |
+        | --- | --- |
+        | [capitalize()](https://www.w3schools.com/python/ref_string_capitalize.asp)| Converts the first character to upper case || [casefold()](https://www.w3schools.com/python/ref_string_casefold.asp) | Converts string into lower case |
+        | [center()](https://www.w3schools.com/python/ref_string_center.asp) | Returns a centered string |
+        | [count()](https://www.w3schools.com/python/ref_string_count.asp) | Returns the number of times a specified value occurs in a string |
+        | [encode()](https://www.w3schools.com/python/ref_string_encode.asp) | Returns an encoded version of the string |
+        | [endswith()](https://www.w3schools.com/python/ref_string_endswith.asp) | Returns true if the string ends with the specified value |
+        | [expandtabs()](https://www.w3schools.com/python/ref_string_expandtabs.asp) | Sets the tab size of the string |
+        | [find()](https://www.w3schools.com/python/ref_string_find.asp) | Searches the string for a specified value and returns the position of where it was found |
+        | [format()](https://www.w3schools.com/python/ref_string_format.asp) | Formats specified values in a string |
+        | format_map() | Formats specified values in a string |
+        | [index()](https://www.w3schools.com/python/ref_string_index.asp) | Searches the string for a specified value and returns the position of where it was found |
+        | [isalnum()](https://www.w3schools.com/python/ref_string_isalnum.asp) | Returns True if all characters in the string are alphanumeric |
+        | [isalpha()](https://www.w3schools.com/python/ref_string_isalpha.asp) | Returns True if all characters in the string are in the alphabet |
+        | [isascii()](https://www.w3schools.com/python/ref_string_isascii.asp) | Returns True if all characters in the string are ascii characters |
+        | [isdecimal()](https://www.w3schools.com/python/ref_string_isdecimal.asp) | Returns True if all characters in the string are decimals |
+        | [isdigit()](https://www.w3schools.com/python/ref_string_isdigit.asp) | Returns True if all characters in the string are digits |
+        | [isidentifier()](https://www.w3schools.com/python/ref_string_isidentifier.asp) | Returns True if the string is an identifier |
+        | [islower()](https://www.w3schools.com/python/ref_string_islower.asp) | Returns True if all characters in the string are lower case |
+        | [isnumeric()](https://www.w3schools.com/python/ref_string_isnumeric.asp) | Returns True if all characters in the string are numeric |
+        | [isprintable()](https://www.w3schools.com/python/ref_string_isprintable.asp) | Returns True if all characters in the string are printable |
+        | [isspace()](https://www.w3schools.com/python/ref_string_isspace.asp) | Returns True if all characters in the string are whitespaces |
+        | [istitle()](https://www.w3schools.com/python/ref_string_istitle.asp) | Returns True if the string follows the rules of a title |
+        | [isupper()](https://www.w3schools.com/python/ref_string_isupper.asp) | Returns True if all characters in the string are upper case |
+        | [join()](https://www.w3schools.com/python/ref_string_join.asp) | Converts the elements of an iterable into a string |
+        | [ljust()](https://www.w3schools.com/python/ref_string_ljust.asp) | Returns a left justified version of the string |
+        | [lower()](https://www.w3schools.com/python/ref_string_lower.asp) | Converts a string into lower case |
+        | [lstrip()](https://www.w3schools.com/python/ref_string_lstrip.asp) | Returns a left trim version of the string |
+        | [maketrans()](https://www.w3schools.com/python/ref_string_maketrans.asp) | Returns a translation table to be used in translations |
+        | [partition()](https://www.w3schools.com/python/ref_string_partition.asp) | Returns a tuple where the string is parted into three parts |
+        | [replace()](https://www.w3schools.com/python/ref_string_replace.asp) | Returns a string where a specified value is replaced with a specified value |
+        | [rfind()](https://www.w3schools.com/python/ref_string_rfind.asp) | Searches the string for a specified value and returns the last position of where it was found |
+        | [rindex()](https://www.w3schools.com/python/ref_string_rindex.asp) | Searches the string for a specified value and returns the last position of where it was found |
+        | [rjust()](https://www.w3schools.com/python/ref_string_rjust.asp) | Returns a right justified version of the string |
+        | [rpartition()](https://www.w3schools.com/python/ref_string_rpartition.asp) | Returns a tuple where the string is parted into three parts |
+        | [rsplit()](https://www.w3schools.com/python/ref_string_rsplit.asp) | Splits the string at the specified separator, and returns a list |
+        | [rstrip()](https://www.w3schools.com/python/ref_string_rstrip.asp) | Returns a right trim version of the string |
+        | [split()](https://www.w3schools.com/python/ref_string_split.asp) | Splits the string at the specified separator, and returns a list |
+        | [splitlines()](https://www.w3schools.com/python/ref_string_splitlines.asp) | Splits the string at line breaks and returns a list |
+        | [startswith()](https://www.w3schools.com/python/ref_string_startswith.asp) | Returns true if the string starts with the specified value |
+        | [strip()](https://www.w3schools.com/python/ref_string_strip.asp) | Returns a trimmed version of the string |
+        | [swapcase()](https://www.w3schools.com/python/ref_string_swapcase.asp) | Swaps cases, lower case becomes upper case and vice versa |
+        | [title()](https://www.w3schools.com/python/ref_string_title.asp) | Converts the first character of each word to upper case |
+        | [translate()](https://www.w3schools.com/python/ref_string_translate.asp) | Returns a translated string |
+        | [upper()](https://www.w3schools.com/python/ref_string_upper.asp) | Converts a string into upper case |
+        | [zfill()](https://www.w3schools.com/python/ref_string_zfill.asp) | Fills the string with a specified number of 0 values at the beginning |
+
+
+* integer
+    * larger integer : 123456 -> `123_456`
+        > computer will ingnore '_'
+        ```=python
+            # integer (用底線代替逗號分隔大數字)
+            x = 20	
+            x = 123_456_7789
+
+    ```=python
+
+    # float
+    x = 20.5
+
+    # complex	
+    x = 1j	
+
+    # list	
+    x = ["apple", "banana", "cherry"]	
+
+    # tuple
+    x = ("apple", "banana", "cherry")	
+
+    # range	
+    x = range(6)	
+
+    # dict
+    x = {"name" : "John", "age" : 36}	
+
+    # set
+    x = {"apple", "banana", "cherry"}	
+
+    # frozenset	
+    x = frozenset({"apple", "banana", "cherry"})	
+
+    # bool
+    x = True
+
+    # bytes	
+    x = b"Hello"		
+
+    # bytearray	
+    x = bytearray(5)	
+
+    # memoryview
+    x = memoryview(bytes(5))	
+
+    ```
+
 * type( ) function
+
+* Specify a Variable Type : Casting in python is therefore done using constructor functions:
+
+    * int() - constructs an integer number from an integer literal, a float literal (by removing all decimals), or a string literal (providing the string represents a whole number)
+        ```=python
+        x = int(1)   # x will be 1
+        y = int(2.8) # y will be 2
+        z = int("3") # z will be 3
+        ```
+
+    * float() - constructs a float number from an integer literal, a float literal or a string literal (providing the string represents a float or an integer)
+
+        ```=python
+        x = float(1)     # x will be 1.0
+        y = float(2.8)   # y will be 2.8
+        z = float("3")   # z will be 3.0
+        w = float("4.2") # w will be 4.2
+        ```
+
+    * str() - constructs a string from a wide variety of data types, including strings, integer literals and float literals
+
+        ```=python
+        x = str("s1") # x will be 's1'
+        y = str(2)    # y will be '2'
+        z = str(3.0)  # z will be '3.0'
+        ```
+
+
 * Mathematical Operations
     * `6 / 3 -> 2.0 (float)` (division得到float)
     * `2**3` (2的3次方)
@@ -42,7 +215,7 @@
 
 * F String
 
-## Day 3 : Conditional 
+## Day 3 : Conditional / Operators
 * Conditional 
     * If/Else
     * Nested If/Else
@@ -50,10 +223,15 @@
     * Multiple IF -> 三個IF條件都會執行
 
 * Comparison Operators  
+    ![](https://i.imgur.com/vwxLTdH.png)    
+
 * Logical Operators  
-    * A AND B
-    * A OR B
-    * NOT A 
+    ![](https://i.imgur.com/IehQt0c.png)
+    > A AND B
+    > 
+    > A OR B
+    > 
+    > NOT A 
 
 
 ## Day 4 : Data Structure
@@ -74,8 +252,20 @@
 * Data Structure : Python儲存數據的一種方式
     > https://docs.python.org/3/tutorial/datastructures.html
 
-* Lists
-    ```=python
+* Python Collections (Arrays) : There are four collection data types in the Python programming language:
+
+
+    | Collection data types | Ordered |  Changeable  | Duplicate |
+    | --------------------- |:-------:|:------------:|:---------:|
+    | List                  |    v    |      v       |   Allow   |
+    | Tuple                 |    v    |      x       |   Allow   |
+    | Set                   |    x    | v*,unindexed | Not allow |
+    | Dictionary            |    v    |      v       | Not allow |
+    > *Set items are unchangeable, but you can remove items and add new items.
+
+
+    ### 1. Lists
+    ```python
     b=[]
 
     b.insert(1,5) # 用于将指定对象插入列表的指定位置
@@ -103,6 +293,176 @@
     b.reverse() # 反向列表中元素
 
     print(b) # [9, 5, 1]
+    ```
+
+ * Change Item Value
+    ```=python
+    thislist = ["apple", "banana", "cherry", "orange", "kiwi", "mango"]
+    thislist[1:3] = ["blackcurrant", "watermelon"]
+    print(thislist) 
+    # ['apple', 'blackcurrant', 'watermelon', 'orange', 'kiwi', 'mango']
+
+
+    # If you insert more items than you replace
+
+    thislist = ["apple", "banana", "cherry"]
+    thislist[1:2] = ["blackcurrant", "watermelon"]
+    print(thislist) 
+    # ['apple', 'blackcurrant', 'watermelon', 'cherry']
+
+    # If you insert less items than you replace
+
+    thislist = ["apple", "banana", "cherry"]
+    thislist[1:3] = ["watermelon"]
+    print(thislist) 
+    # ['apple', 'watermelon']
+
+    ```
+* Add List Items
+
+    * append()
+        ```=python
+        thislist = ["apple", "banana", "cherry"]
+        thislist.append("orange")
+
+        print(thislist)
+        # ['apple', 'banana', 'cherry', 'orange']
+        ```
+    * insert()
+        ```=python
+        thislist = ["apple", "banana", "cherry"]
+        thislist.insert(2, "watermelon")
+
+        print(thislist) 
+        # ['apple', 'banana', 'watermelon', 'cherry']
+
+        ```
+
+    * extend()
+        ```=python
+        thislist = ["apple", "banana", "cherry"]
+        tropical = ["mango", "pineapple", "papaya"]
+        thislist.extend(tropical)
+
+        print(thislist)
+        #['apple', 'banana', 'cherry', 'mango', 'pineapple', 'papaya']
+        ```
+    * Add Any Iterable : The extend() method does not have to append lists, you can add any iterable object (tuples, sets, dictionaries etc.).
+
+        ```=python
+        thislist = ["apple", "banana", "cherry"]
+        thistuple = ("kiwi", "orange")
+
+        thislist.extend(thistuple)
+
+        print(thislist) 
+        # ['apple', 'banana', 'cherry', 'kiwi', 'orange']
+        ```
+
+* Remove List Items
+
+    * remove()
+        ```=python
+        thislist = ["apple", "banana", "cherry"]
+        thislist.remove("banana")
+        print(thislist)
+        # ['apple','cherry']
+        ```
+    * pop():Remove Specified Index
+
+        ```=python
+        thislist = ["apple", "banana", "cherry"]
+        thislist.pop(1)
+        print(thislist)
+        # ['apple','cherry']
+
+        # If you do not specify the index, the pop() method removes the last item.
+
+        thislist = ["apple", "banana", "cherry"]
+        thislist.pop()
+        print(thislist)
+        # ["apple", "banana"]
+        ```
+    * clear()
+        ```python
+        thislist = ["apple", "banana", "cherry"]
+        thislist.clear()
+        print(thislist)
+        #[]
+
+        ```
+
+* Copy a List
+
+    You cannot copy a list simply by typing list2 = list1, because: list2 will only be a reference to list1, and changes made in list1 will automatically also be made in list2.
+   * Make a copy of a list with the copy() or list() method:
+        ```python
+        thislist = ["apple", "banana", "cherry"]
+        mylist = thislist.copy()
+        print(mylist)
+
+        or
+        mylist = list(thislist)
+
+        ```
+    ### 2. Tuple
+* Unpack Tuples
+    ```python
+    fruits = ("apple", "banana", "cherry", "strawberry", "raspberry")
+
+    (green, yellow, *red) = fruits
+
+    print(green) # apple
+    print(yellow) # banana
+    print(red) # ['cherry', 'strawberry', 'raspberry']
+    
+    (green, *tropic, red) = fruits
+
+    print(green) # apple
+    print(tropic) # ['mango', 'papaya', 'pineapple']
+    print(red)# cherry
+    ```
+    
+    ### 3. Set
+* Set Items - Data Types
+
+    ```python
+    myset = {"apple", "banana", "cherry"}
+    print(type(myset))
+    
+    # It is also possible to use the set() constructor to make a set.
+
+    thisset = set(("apple", "banana", "cherry")) # note the double round-brackets
+    print(thisset)
+    # {"apple", "banana", "cherry"}
+    ```
+* Add Items 
+    > Once a set is created, you cannot change its items, but you can add new items.
+
+    ```python
+    thisset = {"apple", "banana", "cherry"}
+
+    thisset.add("orange")
+
+    print(thisset)
+    ```
+* Add Any Iterable
+    > The object in the update() method does not have to be a set, it can be any iterable object (tuples, lists, dictionaries etc.).
+
+    ```python
+    thisset = {"apple", "banana", "cherry"}
+    tropical = {"pineapple", "mango", "papaya"}
+
+    thisset.update(tropical)
+
+    print(thisset)
+    
+    thisset = {"apple", "banana", "cherry"}
+    mylist = ["kiwi", "orange"]
+
+    thisset.update(mylist)
+
+    print(thisset)
     ```
 
 ## Day 5 : Loops
